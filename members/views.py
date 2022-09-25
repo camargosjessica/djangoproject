@@ -13,6 +13,16 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 
+def login(request):
+    template = loader.get_template('login.html')
+    return HttpResponse(template.render({}, request))
+
+
+def welcome(request):
+    template = loader.get_template('welcome.html')
+    return HttpResponse(template.render({}, request))
+
+
 def add(request):
     template = loader.get_template('add.html')
     return HttpResponse(template.render({}, request))
